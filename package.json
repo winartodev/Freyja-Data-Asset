@@ -1,0 +1,22 @@
+{
+  "name": "com.freyja.data-asset",
+  "version": "1.0.0",
+  "displayName": "Freyja Data Asset",
+  "description": "",
+  "unity": "2021.3",
+  "unityRelease": "22f1",
+  "documentationUrl": "",
+  "changelogUrl": "",
+  "licensesUrl": "",
+  "dependencies": {
+  },
+  "keywords": [
+    "Asset"
+  ],
+  "samples": [],
+  "author": {
+    "name": "Freyja",
+    "email": "",
+    "url": ""
+  }
+}
