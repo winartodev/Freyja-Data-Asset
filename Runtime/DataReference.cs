@@ -1,15 +1,15 @@
 ﻿using System;
 
 using UnityEngine;
-#if ODIN_INSPECTOR
+#if UNITY_EDITOR && ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 #endif
 
 namespace Freyja.DataAsset
 {
-#if ODIN_INSPECTOR
+    #if UNITY_EDITOR && ODIN_INSPECTOR
     [HideReferenceObjectPicker]
-#endif
+    #endif
     [Serializable]
     public class DataReference<T> where T : class, new()
     {
@@ -50,24 +50,24 @@ namespace Freyja.DataAsset
         [SerializeField]
         private bool m_UseReference;
 
-    #if ODIN_INSPECTOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         [ShowIf(nameof(m_UseReference))]
-    #endif
+        #endif
         [SerializeField]
         private bool m_SetPersistence;
 
-    #if ODIN_INSPECTOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         [HideIf(nameof(m_UseReference))]
         [HideReferenceObjectPicker]
         [HideLabel]
-    #endif
+        #endif
         [SerializeField]
         private T m_Data;
 
-    #if ODIN_INSPECTOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         [ShowIf(nameof(m_UseReference))]
         [InlineEditor]
-    #endif
+        #endif
         [SerializeField]
         private DataAsset<T> m_Reference;
 

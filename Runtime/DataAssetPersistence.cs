@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
 using UnityEngine;
-#if ODIN_INSPECTOR
+#if UNITY_EDITOR && ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 #endif
 
@@ -31,10 +31,10 @@ namespace Freyja.DataAsset
 
         #region Private
 
-    #if ODIN_INSPECTOR && UNITY_EDITOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         [ShowInInspector]
         [ListDrawerSettings(IsReadOnly = true, ShowFoldout = true)]
-    #endif
+        #endif
         private List<object> _references = new List<object>();
 
         #endregion

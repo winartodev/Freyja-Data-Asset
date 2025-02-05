@@ -1,23 +1,23 @@
 using UnityEngine;
-#if ODIN_INSPECTOR
+#if UNITY_EDITOR && ODIN_INSPECTOR
 using Sirenix.OdinInspector;
 #endif
 
 namespace Freyja.DataAsset
 {
     public abstract class DataAsset<T> :
-    #if ODIN_INSPECTOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         SerializedScriptableObject
-#else
+    #else
         ScriptableObject
-#endif
+    #endif
     {
         #region Fields
 
-    #if ODIN_INSPECTOR
+        #if UNITY_EDITOR && ODIN_INSPECTOR
         [HideLabel]
         [HideReferenceObjectPicker]
-    #endif
+        #endif
         [SerializeField]
         protected T m_Value;
 
